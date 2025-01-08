@@ -1,0 +1,129 @@
+/* Сбрасываем стандартные стили */
+body, h1, form, div, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Общий стиль для страницы */
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background: linear-gradient(to top, #e3e3e3, #f4f4f9 40%);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    flex-direction: column; /* Обеспечиваем вертикальную ориентацию элементов */
+}
+
+/* Контейнер формы */
+.container {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Заголовок */
+h1 {
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+/* Группа полей */
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Метки полей */
+label {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+/* Поля ввода */
+input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #7f3690;
+    outline: none;
+}
+
+/* Группа для кнопки */
+.button-group {
+    display: flex; /* Включаем flexbox */
+    justify-content: center; /* Центрируем кнопку по горизонтали */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+/* Кнопка */
+button {
+    background: rgba(20, 156, 180, 0.6); /* Светло-голубой с полупрозрачностью */
+    width: 70%; /* Сделать кнопку широкой */
+    border: 2px solid rgba(220, 231, 235, 0.5); /* Граница с более высокой непрозрачностью */
+    border-radius: 8px; /* Скругленные углы */
+    padding: 12px 24px; /* Отступы внутри кнопки */
+    color: white; /* Белый текст */
+    font-size: 16px;
+    font-weight: bold; /* Чуть более жирный текст */
+    text-align: center;
+    cursor: pointer;
+    backdrop-filter: blur(10px); /* Эффект размытия фона за кнопкой */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Лёгкая тень для выделения */
+    transition: all 0.3s ease; /* Плавный переход для всех свойств */
+}
+
+/* Эффект при наведении */
+button:hover {
+    background: rgba(39, 193, 220, 0.5); /* Немного более непрозрачный светло-голубой фон */
+    border-color: rgba(220, 231, 235, 0.5); /* Более выраженная граница */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Увеличиваем тень при наведении */
+}
+
+/* Результат */
+#result {
+    margin-top: 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #333;
+}
+
+/* Адаптация под мобильные устройства */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input, button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    #result {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 600px) {
+    button {
+        width: 100%; /* Сделать кнопку широкой на мобильных устройствах */
+        font-size: 20px; /* Увеличить размер шрифта */
+        padding: 16px 32px; /* Увеличить отступы */
+    }
+}
