@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор времени выхода на встречу</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Калькулятор времени выхода на встречу</h1>
+        <form id="time-form">
+            <div class="form-group">
+                <label for="meeting-time">Время встречи:</label>
+                <input type="time" id="meeting-time" required>
+            </div>
+            <div class="form-group">
+                <label for="travel-time">Время в пути:</label>
+                <input type="time" id="travel-time" value="00:30" required>
+            </div>
+            <div class="form-group">
+                <label for="collection-time">Время на сборы:</label>
+                <input type="time" id="collection-time" value="01:00" required>
+            </div>
+            <div class="button-group">
+            <button type="submit">Рассчитать</button>
+            </div>
+        </form>
+        <div id="result"></div>
+        <div id="result-container">
+            <div id="result"></div>
+            <div id="copy-button" style="display: none;"><span id="copy-icon">📋</span> Скопировать результат</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
