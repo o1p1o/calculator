@@ -29,9 +29,30 @@ document.getElementById('time-form').addEventListener('submit', function(event) 
 
     // Формируем результат
     const result = `
-        Время, когда нужно выйти из дома: ${departureTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}<br>
-        Время, когда нужно начать собираться: ${collectionStartTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+    Когда нужно выйти: <span class="highlight">${departureTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span><br>
+    Когда нужно начать собираться: <span class="highlight">${collectionStartTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
     `;
 
     document.getElementById('result').innerHTML = result;
+
+    // Показываем кнопку "Скопировать результат"
+    document.getElementById('copy-button').style.display = 'block';
+});
+
+// Кнопка "Скопировать результат"
+document.getElementById('copy-button').addEventListener('click', function() {
+    const resultText = document.getElementById('result').innerText; // Получаем текст результата
+
+    if (!resultText) {
+        alert("Пожалуйста, сначала рассчитайте результат!");
+        return;
+    }
+
+    // Копируем текст в буфер обмена
+    navigator.clipboard.writeText(resultText).then(function() {
+        alert("Результат скопирован в буфер обмена!");
+    }).catch(function(error) {
+        console.error('Ошибка при копировании: ', error);
+        alert("Произошла ошибка при копировании.");
+    });
 });
