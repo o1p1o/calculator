@@ -50,7 +50,7 @@ document.getElementById('copy-button').addEventListener('click', function() {
 
     // Копируем текст в буфер обмена
     navigator.clipboard.writeText(resultText).then(function() {
-        alert("Результат скопирован в буфер обмена!");
+        alert("Результат скопирован");
     }).catch(function(error) {
         console.error('Ошибка при копировании: ', error);
         alert("Произошла ошибка при копировании.");
