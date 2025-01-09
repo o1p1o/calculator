@@ -102,7 +102,7 @@ button:hover {
     color: rgba(20, 156, 180); /* Цвет, который будет выделять */
     font-size: 16px;
     font-weight: bold; /* Чуть более жирный текст */
-    text-align: center;
+    text-align: left;
     padding: 0 0 20px 0;
     cursor: pointer;
     transition: all 0.3s ease; /* Плавный переход для всех свойств */
