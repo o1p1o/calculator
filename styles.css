@@ -101,7 +101,7 @@ button:hover {
  
     color: rgba(20, 156, 180); /* Цвет, который будет выделять */
     font-size: 16px;
-    font-weight: bold; /* Чуть более жирный текст */
+    font-weight: 500; /* Чуть более жирный текст */
     text-align: left;
     padding: 0 0 20px 0;
     cursor: pointer;
