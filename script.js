@@ -29,8 +29,12 @@ document.getElementById('time-form').addEventListener('submit', function(event) 
 
     // Формируем результат
     const result = `
-    <p>Когда начинать собираться:<br><span class="highlight">${collectionStartTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span></p>
-    <p>Когда нужно выйти:<br><span class="highlight">${departureTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span></p>
+    <div id="result-container">
+    <div>Когда начинать собираться:
+    <br><span class="highlight">${collectionStartTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span></div>
+    <div>Когда нужно выйти:
+    <br><span class="highlight">${departureTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span></div>
+    </div>
     `;
 
     document.getElementById('result').innerHTML = result;
