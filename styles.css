@@ -55,7 +55,7 @@ label {
 input {
     padding: 10px;
     font-size: 1rem;
-    border: 1px solid #ccc;
+    border: 1px solid rgba(39, 193, 220, 0.4);
     border-radius: 6px;
     transition: border-color 0.3s ease;
 }
@@ -152,4 +152,29 @@ button:hover {
         font-size: 20px; /* Увеличить размер шрифта */
         padding: 0 32px 16px 32px; /* Увеличить отступы */
     }
+
+    /* Метки полей */
+label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+/* Поля ввода */
+input {
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    border: 1px solid rgba(39, 193, 220, 0.4);
+    border-radius: 6px;
+    transition: border-color 0.3s ease;
+}
+
+    /* Результат */
+#result {
+    margin-top: 30px;
+    font-size: 16px;
+    text-align: left;
+    color: #333;
+}
 }
