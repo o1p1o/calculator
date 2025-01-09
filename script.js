@@ -29,8 +29,8 @@ document.getElementById('time-form').addEventListener('submit', function(event) 
 
     // Формируем результат
     const result = `
-    Когда нужно выйти: <span class="highlight">${departureTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span><br>
-    Когда нужно начать собираться: <span class="highlight">${collectionStartTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
+    Когда нужно выйти:<br><span class="highlight">${departureTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span><br>
+    Когда начинать собираться:<br><span class="highlight">${collectionStartTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
     `;
 
     document.getElementById('result').innerHTML = result;
